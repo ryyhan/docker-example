@@ -7,7 +7,7 @@
 
 --- 
 
-### Create a Dockerfile
+### 1. Create a Dockerfile
   
 ```
 # Use a slim Python 3.9 image
@@ -30,18 +30,53 @@ CMD ["python", "app.py"]
 
 ```
 
-## Build Docker Image
+## 2. Build Docker Image
 
 ```
 docker build -t my_image_name .
 ```
 
-## Run Docker Container
+## 3. Run Docker Container
 
 ```
 docker run my-python-app
 ```
 
+
+---
+
+# Running linux shell using Docker
+
+- Step 1: Create a Dockerfile
+- Step 2: Build Docker Image
+- Step 3: Run Docker Container
+  
+--- 
+
+### Step 1. Create a Dockerfile
+
+```
+FROM ubuntu:latest
+
+# Set working directory
+WORKDIR /app
+
+CMD ["bash"]
+
+```
+
+### Step 2. Build Docker Image
+
+```
+docker build -t my_image_name .
+```
+
+### Step 3. Run Docker Container
+
+```
+docker run -it my-bash-image
+```
+---
 ## More Commands
 
 ```
